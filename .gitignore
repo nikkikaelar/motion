@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+.env.*
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Videos and outputs
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.m4v
+*.gif
+*.jpg
+*.jpeg
+*.png
+outputs/
+
+# Model weights and caches
+*.pt
+*.onnx
+*.engine
+*.npy
+*.npz
+ultralytics/  
+
+# Logs
+*.log
+
+# Node (if any)
+node_modules/

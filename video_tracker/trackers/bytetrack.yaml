@@ -1,0 +1,10 @@
+# Minimal ByteTrack config for Ultralytics. Kept conservative for general videos.
+# Ref: Ultralytics tracker schema; this file is loaded by model.track(..., tracker=...)
+tracker_type: bytetrack
+track_high_thresh: 0.5
+track_low_thresh: 0.1
+new_track_thresh: 0.6
+match_thresh: 0.8
+track_buffer: 30
+frame_rate: 30
+# NOTE: frame_rate is only a hint to the tracker; we compute movement in pixels/frame in app.py.
