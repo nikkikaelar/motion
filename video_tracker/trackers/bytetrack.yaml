@@ -7,4 +7,5 @@ new_track_thresh: 0.6
 match_thresh: 0.8
 track_buffer: 30
 frame_rate: 30
+fuse_score: False
 # NOTE: frame_rate is only a hint to the tracker; we compute movement in pixels/frame in app.py.

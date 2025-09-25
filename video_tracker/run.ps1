@@ -1,16 +1,10 @@
-param(
-    [string]$InputPath = "input.mp4",
-    [string]$OutputPath = "out.mp4"
-)
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r video_tracker\requirements.txt
 
-$ErrorActionPreference = "Stop"
 
-# Usage examples:
-#   ./video_tracker/run.ps1 -InputPath input.mp4 -OutputPath out.mp4
-#   ./video_tracker/run.ps1 -InputPath input.mp4 -OutputPath out.mp4 -- --only-moving --static-camera --preset quality --resolution-cap 1280 --speed-threshold 25
-# Note: extra args after "--" are forwarded to the Python script.
-
-# Forward any remaining arguments to Python
-$extra = $args
-
-python video_tracker/app.py --input $InputPath --output $OutputPath @extra
+# Higher accuracy run
+python video_tracker\app.py \ 
+  --input "video_tracker\robbery.mp4" \ 
+  --output "video_tracker\robbery_out.mp4" \ 
+  --preset quality --resolution-cap 960 --min-detect-conf 0.6 --class-allowlist robbers
