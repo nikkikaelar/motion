@@ -1,4 +1,4 @@
-# Entropy: Video Tracker MVP
+# PATHFINDER : MOTION TRACKING + DATA LABELING
 
 Server-side video processor that annotates videos with colored, per-ID boxes for moving objects.
 
